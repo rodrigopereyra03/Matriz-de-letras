@@ -67,9 +67,14 @@ void mostrarMatrizVocales(char matriz[][TAM],int t){
 
     for(int i=0; i<TAM; i++){
         for(int j=0; j<6; j++){
-            if(matriz[i][j]== 'a' || matriz[i][j] == 'e' || matriz[i][j] == 'i' || matriz[i][j] == 'o' || matriz[i][j] == 'u'){
-                printf(" / %c /", matriz[i][j]);
+
+            if(matriz[i][j]== 'a' || matriz[i][j] == 'e' || matriz[i][j] == 'i' || matriz[i][j] == 'o' || matriz[i][j] == 'u' ||
+               matriz[i][j]== 'A' || matriz[i][j] == 'E' || matriz[i][j] == 'I' || matriz[i][j] == 'O' || matriz[i][j] == 'U' ){
+                    printf(" / %c /", matriz[i][j]);
+            }else{
+                printf(" / # /");
             }
+
         }
         printf("\n");
     }
@@ -84,6 +89,8 @@ void mostrarMatrizDiagonal(char matriz[][TAM],int t){
         for(int j=0; j<6; j++){
             if( i == j){
                 printf("/ %c /",matriz[i][j]);
+            }else{
+                printf("/ # /");
             }
         }
         printf("\n");
